@@ -5,6 +5,6 @@ try:
         res = int(s[2::-1])
         print(f"Получилось число {res}")
     else:
-        print("Не попали в три разряда")
+        print("Введенно не трёхзначное число")
 except ValueError:
     print("Ввели не целое число")
