@@ -1,19 +1,10 @@
-def swap_hundreds_and_tens(number):
-    # Проверяем, что число трехзначное
-    if 100 <= number <= 999:
-        # Извлекаем цифры
-        hundreds = number // 100  # Цифра сотен
-        tens = (number // 10) % 10  # Цифра десятков
-        units = number % 10  # Цифра единиц
-
-        # Формируем новое число с переставленными сотнями и десятками
-        new_number = tens * 100 + hundreds * 10 + units
-        return new_number
+try:
+    c = int(input())
+    if c >= 100 and c <=999:
+        s = str(c)
+        res = int(s[2::-1])
+        print(f"Получилось число {res}")
     else:
-        raise ValueError("Число должно быть трехзначным.")
-
-
-# Пример
-input_number = 123
-result = swap_hundreds_and_tens(input_number)
-print(result)  # Вывод: 213
+        print("Не попали в три разряда")
+except ValueError:
+    print("Ввели не целое число")
