@@ -21,3 +21,6 @@ for word in words:
 for key, value in word_count.items():
     print(f"{key}: {value}")
 
+unique_words_count = len(word_count)
+print(f"\nКоличество уникальных слов: {unique_words_count}")
+
